@@ -4,49 +4,57 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="./index.css" rel="stylesheet" />
         <script src="https://cdn.tailwindcss.com"></script>
+        <link href="./index.css" rel="stylesheet" />
+
         <title>Test work</title>
     </head>
     <body>
-        <div id="myChart">
-            <canvas></canvas>
-        </div>
-        <div class="range-sliders flex w-full justify-between px-10">
-            <div class="storage w-96">
-                <div class="flex justify-between mb-2">
-                    <span>Storage</span>
-                    <span class="storage-label">100 GB</span>
+        <main>
+            <div class="range-sliders flex gap-6">
+                <div class="storage flex-1">
+                    <div class="flex justify-between">
+                        <span>Storage</span>
+                        <span class="storage-label">100 GB</span>
+                    </div>
+                    <input
+                        type="range"
+                        step="1"
+                        min="1"
+                        max="1000"
+                        value="100"
+                        class="slider w-full"
+                        id="myRangeStorage"
+                    />
                 </div>
-                <input
-                    type="range"
-                    step="1"
-                    min="1"
-                    max="1000"
-                    value="100"
-                    class="slider w-full"
-                    id="myRangeStorage"
-                />
-            </div>
-            <div class="transfer w-96">
-                <div class="flex justify-between">
-                    <span>Transfer</span>
-                    <span class="transfer-label">400 GB</span>
+                <div class="transfer flex-1">
+                    <div class="flex justify-between">
+                        <span>Transfer</span>
+                        <span class="transfer-label">400 GB</span>
+                    </div>
+                    <input
+                        type="range"
+                        step="1"
+                        min="1"
+                        max="1000"
+                        value="400"
+                        class="slider w-full"
+                        id="myRangeTransfer"
+                    />
                 </div>
-                <input
-                    type="range"
-                    step="1"
-                    min="1"
-                    max="1000"
-                    value="400"
-                    class="slider w-full"
-                    id="myRangeTransfer"
-                />
             </div>
-        </div>
 
-        <div id="charts"></div>
+            <div id="charts" class="flex">
+                <div class="labels flex flex-col justify-evenly"></div>
+                <div id="bars" class="mt-10 flex-1">
+                    <canvas></canvas>
+                </div>
+            </div>
+        </main>
 
+        <script src="
+        https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js
+        "></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="./data.js"></script>
         <script src="./index.js"></script>
