@@ -1,0 +1,13 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    width: 900;
+    margin: 0 auto;
+}
