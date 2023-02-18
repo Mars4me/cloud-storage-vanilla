@@ -1,4 +1,4 @@
-const data = [
+export let data = [
     {
         name: 'backblaze.com',
         type: null,
@@ -16,7 +16,7 @@ const data = [
         name: 'bunny.net',
         minPrice: null,
         maxPrice: 10,
-        type: ['HDD', 'SSD'],
+        type: { value: ['HDD', 'SSD'], active: 0 },
         prices: [
             {
                 storage: 0.01,
@@ -34,7 +34,7 @@ const data = [
         name: 'scaleway.com',
         minPrice: null,
         maxPrice: null,
-        type: ['Multi', 'Single'],
+        type: { value: ['Multi', 'Single'], active: 0 },
         prices: [
             {
                 storage: 0.06,
